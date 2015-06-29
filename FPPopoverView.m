@@ -12,7 +12,7 @@
 
 #define FP_POPOVER_ARROW_HEIGHT 20.0
 #define FP_POPOVER_ARROW_BASE 20.0
-#define FP_POPOVER_RADIUS 10.0
+#define FP_POPOVER_RADIUS 0.0
 
 //iVars
 @interface FPPopoverView()
@@ -172,9 +172,9 @@
     else
     {
         rect.size.width = w - 2*b;
-        rect.size.height = h - 2*b;
+        rect.size.height = h - ah - 2*b;
         rect.origin.x = b;
-        rect.origin.y = b;        
+        rect.origin.y = ah + b;
     }
     
     
