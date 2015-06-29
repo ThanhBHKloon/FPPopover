@@ -602,8 +602,15 @@
     _alpha = alpha;
     self.view.alpha = alpha;
 }
-
-
+#pragma mark Custom for PriceShare
+- (void) reFramePopOver:(float)heightOfPopover {
+    _contentSize=CGSizeMake(_contentSize.width, heightOfPopover<kHeightOfPopover+40?heightOfPopover+40:kHeightOfPopover+40);
+    [self presentPopoverFromPoint:self.origin];
+}
+- (void) reFramePopoverTableView:(CGSize)frameOfPopover {
+    _contentSize=CGSizeMake(frameOfPopover.width, (frameOfPopover.height-4)<kHeightOfPopover?(frameOfPopover.height-4):kHeightOfPopover);
+    [self presentPopoverFromPoint:self.origin];
+}
 
 
 @end
