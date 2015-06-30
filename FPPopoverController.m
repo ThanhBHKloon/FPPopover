@@ -53,7 +53,7 @@
 @synthesize tint = _tint;
 @synthesize border = _border;
 @synthesize alpha = _alpha;
-
+#define kHeightOfPopover 264
 -(void)addObservers
 {
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];   
